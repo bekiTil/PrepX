@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=TypoGraphica:wght@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "fugasOne";
+  src: url(../public/fonts/FugazOne-Regular.ttf);
+}
+@font-face{
+  font-family:"typograhica";
+  src:url(../public/fonts/typographica.ttf);
+
+}
+@font-face{
+  font-family:"minionPro";
+  src:url(../public/fonts/MinionProRegular.ttf);
+  
+}
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}

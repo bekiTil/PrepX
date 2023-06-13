@@ -1,0 +1,18 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    padding: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
