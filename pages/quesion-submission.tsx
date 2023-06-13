@@ -399,7 +399,7 @@ const QuesionSubmission: NextPage = () => {
         alt=""
         src="/iconsnavigate-next2.svg"
       />
-      <Header onHomeTextClick={onHomeTextClick} />
+      {/* <Header onHomeTextClick={onHomeTextClick} /> */}
     </div>
   );
 };
