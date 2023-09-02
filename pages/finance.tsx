@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
-import FrameComponent from "../components/frame-component";
 import Header from "../components/header";
 import NavbarAuth from "../components/headern";
 import {
@@ -12,9 +11,32 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import CourseInfo from "../components/finance-card";
+import CourseInfo, { CourseInfoData } from "../components/finance-card";
 
 const Finance: NextPage = () => {
+  const financeData: CourseInfoData[] = [
+    {
+      title: "Atomic Structure",
+      subject: "Math",
+      price: "50 ETB",
+      date: "March 23",
+    },
+    {
+      title: "Chemical Reactions",
+      subject: "Chemistry",
+      price: "60 ETB",
+      date: "April 5",
+    },
+    {
+      title: "Introduction to Algebra",
+      subject: "Math",
+      price: "45 ETB",
+      date: "February 15",
+    },
+    
+   
+  ];
+  
   return (
     <div>
       <NavbarAuth />
@@ -31,11 +53,11 @@ const Finance: NextPage = () => {
           <Typography>Recent</Typography>
 
           <Grid container spacing={2} justifyContent="center">
-            {[1, 2, 3].map((val) => (
-              <Grid item xs={12}>
-                <CourseInfo />
-              </Grid>
-            ))}
+          {financeData.map((data, index) => (
+          <Grid item xs={12} key={index}>
+            <CourseInfo data={data} />
+          </Grid>
+        ))}
           </Grid>
           <Divider
             sx={{
@@ -46,11 +68,11 @@ const Finance: NextPage = () => {
           />
           <Typography>last Week</Typography>
           <Grid container spacing={2} justifyContent="center">
-            {[1, 2, 3].map((val) => (
-              <Grid item xs={12}>
-                <CourseInfo />
-              </Grid>
-            ))}
+          {financeData.map((data, index) => (
+          <Grid item xs={12} key={index}>
+            <CourseInfo data={data} />
+          </Grid>
+        ))}
           </Grid>
         </Container>
       </Box>

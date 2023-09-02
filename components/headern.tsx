@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Typography, Button, Box, Avatar } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import { deepOrange } from '@mui/material/colors';
+import { useRouter } from 'next/router';
 
 const NavbarAuth = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter()
   
     const toggleMenu = () => {
       setMenuOpen(!menuOpen);
@@ -27,8 +29,8 @@ const NavbarAuth = () => {
           <p className="font-typograhica">Prep<span className="text-purple-600">X</span></p>
           </Typography>
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">Finance</Button>
+            <Button  onClick={()=>{router.push("home")}}color="inherit">Home</Button>
+            <Button  onClick={()=>{router.push("finance")}} color="inherit">Finance</Button>
             <Button color="inherit">Message</Button>
             <Button color="inherit">Notification</Button>
             <Avatar sx={{ bgcolor: deepOrange[500] }}>M</Avatar>

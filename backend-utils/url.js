@@ -1,0 +1,1 @@
+export const API_URL="use your own"

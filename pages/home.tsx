@@ -3,6 +3,7 @@ import QuestionBox from "../components/simple_card";
 import NavbarAuth from "../components/headern";
 import {
   Box,
+  Button,
   Card,
   CardContent,
   Container,
@@ -15,8 +16,11 @@ import {
 import NoteBox from "../components/note-card";
 import CourseCard from "../components/finance-card";
 import CourseInfo from "../components/finance-card";
+import { useRouter } from "next/router";
 
 const Home: React.FC = () => {
+
+  const router = useRouter()
   const questions = [
     { number: 145, question: "Question " },
     { number: 545, question: "Paid" },
@@ -92,14 +96,10 @@ const Home: React.FC = () => {
                       minHeight={150}
                     >
                       <div className="">
-                        <TextField
-                          label="Create Questions"
-                          InputProps={{
-                            style: {
-                              border: "none",
-                            },
-                          }}
-                        ></TextField>
+                        <Button variant="outlined" onClick={()=>{router.push("question-submissions")}}>
+                          Create Questions
+                        </Button>
+                        
                       </div>
                     </Box>
                   </Grid>
@@ -120,14 +120,10 @@ const Home: React.FC = () => {
                       minHeight={150}
                     >
                       <div className="">
-                        <TextField
-                          label="Create Note"
-                          InputProps={{
-                            style: {
-                              border: "none",
-                            },
-                          }}
-                        ></TextField>
+                      <Button variant="outlined" onClick={()=>{router.push("CreateNote")}}>
+                          Create Notes
+                        </Button>
+                       
                       </div>
                     </Box>
                   </Grid>

@@ -15,6 +15,6 @@
       "jsx": "preserve",
       "incremental": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/layout/side-nav.JS", "components/layout/top-nav.js", "components/layout/sidebarContext.js", "components/contributors-list-results.js", "redux/storage.js"],
     "exclude": ["node_modules"]
   }
